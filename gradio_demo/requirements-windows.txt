@@ -1,0 +1,16 @@
+--extra-index-url https://download.pytorch.org/whl/cu118
+gradio
+diffusers==0.25.0
+torch==2.0.1
+torchvision==0.15.2
+transformers==4.36.2
+accelerate
+safetensors
+einops
+onnxruntime-gpu
+spaces==0.19.4
+omegaconf
+peft
+huggingface-hub==0.20.2
+opencv-python
+insightface==0.6.2
