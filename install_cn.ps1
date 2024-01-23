@@ -15,7 +15,7 @@ pip install -U -r gradio_demo/requirements-windows.txt
 
 huggingface-cli download --resume-download InstantX/InstantID --local-dir checkpoints
 
-huggingface-cli download --resume-download DIAMONIK7777/antelopev2 --local-dir models
+huggingface-cli download --resume-download DIAMONIK7777/antelopev2 --local-dir models/antelopev2
 
 Write-Output "°²×°Íê±Ï"
 Read-Host | Out-Null ;
