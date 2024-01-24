@@ -3,6 +3,7 @@
 <a href='https://arxiv.org/abs/2401.07519'><img src='https://img.shields.io/badge/Technique-Report-red'></a> 
 <a href='https://huggingface.co/papers/2401.07519'><img src='https://img.shields.io/static/v1?label=Paper&message=Huggingface&color=orange'></a> 
 <a href='https://huggingface.co/spaces/InstantX/InstantID'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue'></a> 
+[![Replicate](https://replicate.com/zsxkib/instant-id/badge)](https://replicate.com/zsxkib/instant-id)
 
 **InstantID : Zero-shot Identity-Preserving Generation in Seconds**
 
@@ -11,9 +12,10 @@ InstantID is a new state-of-the-art tuning-free method to achieve ID-Preserving 
 <img src='assets/applications.png'>
 
 ## Release
+- [2024/1/23] 🔥 Our pipeline has been merged into [diffusers](https://github.com/huggingface/diffusers/blob/main/examples/community/pipeline_stable_diffusion_xl_instantid.py)!
 - [2024/1/22] 🔥 We release the [pre-trained checkpoints](https://huggingface.co/InstantX/InstantID), [inference code](https://github.com/InstantID/InstantID/blob/main/infer.py) and [gradio demo](https://huggingface.co/spaces/InstantX/InstantID)!
-- [2024/1/15] 🔥 We release the technical report.
-- [2023/12/11] 🔥 We launch the project page.
+- [2024/1/15] 🔥 We release the [technical report](https://arxiv.org/abs/2401.07519).
+- [2023/12/11] 🔥 We launch the [project page](https://instantid.github.io/).
 
 ## Demos
 
@@ -150,18 +152,28 @@ python gradio_demo/app.py
 - For over-saturation, decrease the ip_adapter_scale. If not work, decrease controlnet_conditioning_scale.
 - For higher text control ability, decrease ip_adapter_scale.
 - For specific styles, choose corresponding base model makes differences.
-
+- We have not supported multi-person yet, will only use the largest face as reference pose.
 
 ## Resources
 
+### Gradio Demo
+- [Huggingface Space](https://huggingface.co/spaces/InstantX/InstantID)
+- [instantid.org](https://instantid.org/)
+
+### Replicate Demo
+- [zsxkib/instant-id](https://replicate.com/zsxkib/instant-id)
+
 ### ComfyUI
-1. [ZHO-ZHO-ZHO/ComfyUI-InstantID](https://github.com/ZHO-ZHO-ZHO/ComfyUI-InstantID)
-2. [huxiuhan/ComfyUI-InstantID](https://github.com/huxiuhan/ComfyUI-InstantID)
+- [ZHO-ZHO-ZHO/ComfyUI-InstantID](https://github.com/ZHO-ZHO-ZHO/ComfyUI-InstantID)
+- [huxiuhan/ComfyUI-InstantID](https://github.com/huxiuhan/ComfyUI-InstantID)
+
+### Windows
+- [sdbds/InstantID-for-windows](https://github.com/sdbds/InstantID-for-windows)
 
 ## Acknowledgements
 - Our work is highly inspired by [IP-Adapter](https://github.com/tencent-ailab/IP-Adapter) and [ControlNet](https://github.com/lllyasviel/ControlNet). Thanks for their great works!
-- Thanks [ZHO-ZHO-ZHO](https://github.com/ZHO-ZHO-ZHO), [huxiuhan](https://github.com/huxiuhan) for supporting ComfyUI.
-- Thanks to the HuggingFace team for their generous GPU support!
+- Thanks [ZHO-ZHO-ZHO](https://github.com/ZHO-ZHO-ZHO), [huxiuhan](https://github.com/huxiuhan), [sdbds](https://github.com/sdbds), [zsxkib](https://replicate.com/zsxkib) for their generous contributions.
+- Thanks to the [HuggingFace](https://github.com/huggingface) gradio team for their free GPU support!
 
 ## Disclaimer
 This project is released under [Apache License](https://github.com/InstantID/InstantID?tab=Apache-2.0-1-ov-file#readme) and aims to positively impact the field of AI-driven image generation. Users are granted the freedom to create images using this tool, but they are obligated to comply with local laws and utilize it responsibly. The developers will not assume any responsibility for potential misuse by users.
