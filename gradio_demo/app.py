@@ -222,7 +222,7 @@ def main(pretrained_model_name_or_path="wangqixun/YamerMIX_v8"):
         if len(face_info) == 0:
             raise gr.Error(f"Cannot find any face in the image! Please upload another person image")
         
-        face_info = face_info[-1]
+        face_info = sorted(face_info, key=lambda x:(x['bbox'][2]-x['bbox'][0])*x['bbox'][3]-x['bbox'][1])[-1]  # only use the maximum face
         face_emb = face_info['embedding']
         face_kps = draw_kps(convert_from_cv2_to_image(face_image_cv2), face_info['kps'])
         
@@ -336,7 +336,7 @@ def main(pretrained_model_name_or_path="wangqixun/YamerMIX_v8"):
                 
                 # prompt
                 prompt = gr.Textbox(label="Prompt",
-                        info="Give simple prompt is enough to achieve good face fedility",
+                        info="Give simple prompt is enough to achieve good face fidelity",
                         placeholder="A photo of a person",
                         value="")
                 
@@ -346,7 +346,7 @@ def main(pretrained_model_name_or_path="wangqixun/YamerMIX_v8"):
                 
                 # strength
                 identitynet_strength_ratio = gr.Slider(
-                    label="IdentityNet strength (for fedility)",
+                    label="IdentityNet strength (for fidelity)",
                     minimum=0,
                     maximum=1.5,
                     step=0.05,
