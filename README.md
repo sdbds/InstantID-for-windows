@@ -1,26 +1,34 @@
-# InstantID
-<a href='https://instantid.github.io/'><img src='https://img.shields.io/badge/Project-Page-green'></a> 
-<a href='https://arxiv.org/abs/2401.07519'><img src='https://img.shields.io/badge/Technique-Report-red'></a> 
+<div align="center">
+<h1>InstantID: Zero-shot Identity-Preserving Generation in Seconds</h1>
+
+[**Qixun Wang**](https://github.com/wangqixun)<sup>12</sup> · [**Xu Bai**](https://huggingface.co/baymin0220)<sup>12</sup> · [**Haofan Wang**](https://haofanwang.github.io/)<sup>12*</sup> · [**Zekui Qin**](https://github.com/ZekuiQin)<sup>12</sup> · [**Anthony Chen**](https://antonioo-c.github.io/)<sup>123</sup> · Huaxia Li<sup>2</sup> · Xu Tang<sup>2</sup>
+
+<sup>1</sup>InstantX Team · <sup>2</sup>Xiaohongshu Inc · <sup>3</sup>Peking University
+
+<sup>*</sup>corresponding authors
+
+{haofanwang.ai, wangqixun.ai}@gmail.com
+
+<a href='https://instantid.github.io/'><img src='https://img.shields.io/badge/Project-Page-green'></a>
+<a href='https://arxiv.org/abs/2401.07519'><img src='https://img.shields.io/badge/Technique-Report-red'></a>
 <a href='https://huggingface.co/papers/2401.07519'><img src='https://img.shields.io/static/v1?label=Paper&message=Huggingface&color=orange'></a> 
 <a href='https://huggingface.co/spaces/InstantX/InstantID'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue'></a>
+[![ModelScope](https://img.shields.io/badge/modelscope-InstantID-blue)](https://modelscope.cn/studios/instantx/InstantID/summary)
 [![GitHub](https://img.shields.io/github/stars/InstantID/InstantID?style=social)](https://github.com/InstantID/InstantID)
 
-**InstantID : Zero-shot Identity-Preserving Generation in Seconds**
+</div>
 
 InstantID is a new state-of-the-art tuning-free method to achieve ID-Preserving generation with only single image, supporting various downstream tasks.
 
 <img src='assets/applications.png'>
 
 ## Release
-- [2024/1/23] 🔥 Our pipeline has been merged into [diffusers](https://github.com/huggingface/diffusers/blob/main/examples/community/pipeline_stable_diffusion_xl_instantid.py)!
-- [2024/1/22] 🔥 We release the [pre-trained checkpoints](https://huggingface.co/InstantX/InstantID), [inference code](https://github.com/InstantID/InstantID/blob/main/infer.py) and [gradio demo](https://huggingface.co/spaces/InstantX/InstantID)!
-- [2024/1/15] 🔥 We release the [technical report](https://arxiv.org/abs/2401.07519).
+- [2024/01/23] 🔥 Our pipeline has been merged into [diffusers](https://github.com/huggingface/diffusers/blob/main/examples/community/pipeline_stable_diffusion_xl_instantid.py)!
+- [2024/01/22] 🔥 We release the [pre-trained checkpoints](https://huggingface.co/InstantX/InstantID), [inference code](https://github.com/InstantID/InstantID/blob/main/infer.py) and [gradio demo](https://huggingface.co/spaces/InstantX/InstantID)!
+- [2024/01/15] 🔥 We release the [technical report](https://arxiv.org/abs/2401.07519).
 - [2023/12/11] 🔥 We launch the [project page](https://instantid.github.io/).
 
 ## Demos
-<a href='https://huggingface.co/spaces/InstantX/InstantID'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue'></a> 
-[![Replicate](https://replicate.com/zsxkib/instant-id/badge)](https://replicate.com/zsxkib/instant-id)
-[![ModelScope](https://img.shields.io/badge/modelscope-InstantID-blue)](https://modelscope.cn/studios/instantx/InstantID/summary)
 
 ### Stylized Synthesis
 
@@ -186,6 +194,9 @@ python gradio_demo/app.py
 ### Replicate Demo
 - [zsxkib/instant-id](https://replicate.com/zsxkib/instant-id)
 
+### WebUI
+- [Mikubill/sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet/discussions/2589)
+
 ### ComfyUI
 - [ZHO-ZHO-ZHO/ComfyUI-InstantID](https://github.com/ZHO-ZHO-ZHO/ComfyUI-InstantID)
 - [huxiuhan/ComfyUI-InstantID](https://github.com/huxiuhan/ComfyUI-InstantID)
@@ -194,6 +205,7 @@ python gradio_demo/app.py
 - [sdbds/InstantID-for-windows](https://github.com/sdbds/InstantID-for-windows)
 
 ## Acknowledgements
+- InstantID is developed by InstantX Team at Xiaohongshu Inc, all copyright reserved.
 - Our work is highly inspired by [IP-Adapter](https://github.com/tencent-ailab/IP-Adapter) and [ControlNet](https://github.com/lllyasviel/ControlNet). Thanks for their great works!
 - Thanks [ZHO-ZHO-ZHO](https://github.com/ZHO-ZHO-ZHO), [huxiuhan](https://github.com/huxiuhan), [sdbds](https://github.com/sdbds), [zsxkib](https://replicate.com/zsxkib) for their generous contributions.
 - Thanks to the [HuggingFace](https://github.com/huggingface) gradio team for their free GPU support!
@@ -201,6 +213,9 @@ python gradio_demo/app.py
 
 ## Disclaimer
 The code of InstantID is released under [Apache License](https://github.com/InstantID/InstantID?tab=Apache-2.0-1-ov-file#readme) for both academic and commercial usage. **However, both manual-downloading and auto-downloading face models from insightface are for non-commercial research purposes only** accoreding to their [license](https://github.com/deepinsight/insightface?tab=readme-ov-file#license). Users are granted the freedom to create images using this tool, but they are obligated to comply with local laws and utilize it responsibly. The developers will not assume any responsibility for potential misuse by users.
+
+## Declaration
+🚨🚨🚨 We solemnly clarify that [FAKE][FAKE][FAKE] http://instantid.org [FAKE][FAKE][FAKE] is not authorized and has no relationship with us. It is infringing and quite misleading, and has never contacted us for official cooperation. Please be aware of your personal privacy and subscription fraud. We reserve all legal rights.
 
 ## Star History
 
@@ -217,3 +232,6 @@ If you find InstantID useful for your research and applications, please cite us 
   journal={arXiv preprint arXiv:2401.07519},
   year={2024}
 }
+```
+
+For any question, please feel free to contact us via haofanwang.ai@gmail.com or wangqixun.ai@gmail.com.
